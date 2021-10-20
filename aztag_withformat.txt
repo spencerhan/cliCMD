@@ -1,0 +1,1 @@
+az tag list --query "[].{tagname: tagName, tagvalue: values[0].tagValue}"

@@ -1,0 +1,2 @@
+/subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa = /subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa
+az group export --resource-group SandboxResourceGroup --resource-ids /subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa

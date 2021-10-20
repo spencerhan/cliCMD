@@ -1,0 +1,1 @@
+azcopy copy "C:\Users\spence\Documents\sampleData\*.json" "$Blob_SAS_Url" --recursive=true --put-md5 --overwrite=true
