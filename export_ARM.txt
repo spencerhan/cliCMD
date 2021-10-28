@@ -1,2 +1,5 @@
-/subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa = /subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa
-az group export --resource-group SandboxResourceGroup --resource-ids /subscriptions/0e666f4b-1740-4faa-b957-cc1cd4f5c31f/resourceGroups/SandboxResourceGroup/providers/Microsoft.Storage/storageAccounts/rhan077sandboxsa
+$storageAccountID = $(az resource show --resource-group SandboxResourceGroup --resource-type Microsoft.Storage/storageAccounts --name rhan077sandboxsa --query id --output tsv)
+az group export --resource-group SandboxResourceGroup --resource-ids $storageAccountID
+
+$adfid = $(az resource show --resource-group SandboxResourceGroup --name SpenceSandboxADF --resource-type Microsoft.DataFactory/factories --query id --output tsv)
+az group export --resource-group SandboxResourceGroup --resource-ids $adfid #unfortunately it's not supported currently.
